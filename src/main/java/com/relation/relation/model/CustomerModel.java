@@ -16,11 +16,11 @@ import java.sql.Date;
 public class CustomerModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long cutomerId;
+//    @OneToOne(cascade = CascadeType.ALL)
+    private long customerId;
     private String fristName;
     private String lastName;
     private String noHp;
-    @Lob
     private String addres;
     private String email;
     private Date birthDate;
