@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "room")
 public class RoomModel {
     @Id
-    @Column(length = 5)
+    @Column(length = 10)
     private String roomId;
     private String maxOfSeat;
 }

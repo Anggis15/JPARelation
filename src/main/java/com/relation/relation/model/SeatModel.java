@@ -14,7 +14,7 @@ public class SeatModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long seatId;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "roomSeatId", referencedColumnName = "roomId")
     private RoomModel roomSeatId;
 }

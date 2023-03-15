@@ -16,10 +16,10 @@ public class ScreeningModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long screeningId;
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "filmId", referencedColumnName = "filmId")
     private FilmModel filmId;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "roomId", referencedColumnName = "roomId")
     private RoomModel roomId;
     private Date screeningDate;
