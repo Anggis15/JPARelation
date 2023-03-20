@@ -1,5 +1,6 @@
 package com.relation.relation.controller;
 
+import com.relation.relation.model.ScreeningCustomQuery;
 import com.relation.relation.model.ScreeningModel;
 import com.relation.relation.repository.ScreeningRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,5 +28,10 @@ public class ScreeningController {
     @GetMapping("/{date}")
     private List<ScreeningModel> getByDate(@PathVariable("date") Date date){
         return screeningRepository.findByScreeningDate(date);
+    }
+
+    @GetMapping("/custom")
+    private List<ScreeningCustomQuery> getDateName(){
+        return screeningRepository.getDateFilm();
     }
 }

@@ -24,4 +24,6 @@ public class CustomerModel {
     private String addres;
     private String email;
     private Date birthDate;
+    private String username;
+    private String password;
 }
